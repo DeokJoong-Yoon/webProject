@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/poster.css">
+    <title>표 기본 표현</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #dd1b1b;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1px 20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>표의 병합 - rowspan속성</h3>
+        <table border="1">
+            <colgroup>
+                <col style="background-color: #eee;">
+                <col>
+                <col style="width:150px" ;>
+                <col style="width:150px" ;>
+            </colgroup>
+            <td rowspan="3">아래 줄(rows)<br />셀 합치기</td>
+            <td>1행(row) 2열</td>
+            </tr>
+            <tr>
+                <td>2행(row) 2열</td>
+            </tr>
+            <tr>
+                <td>3행(row) 3열</td>
+            </tr>
+            </thead>
+        </table>
+        <h3>표의 병합 - colspan 속성</h3>
+        <table border="1">
+            <tr>
+                <td colspan="3">옆 칸(cols)의 셀 합치기</td>
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+                <td>2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+        </table>
+        <h3>TV 편성표</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th>ABC</th>
+                    <th>BBC</th>
+                    <th>CNN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>6pm - 7pm</b></td>
+                    <td rowspan="2">영화</td>
+                    <td>코미디</td>
+                    <td>뉴스</td>
+                </tr>
+                <tr>
+                    <td><b>7pm - 8pm</b></td>
+                    <td>스포츠</td>
+                    <td>시사</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <th>
+                        <collapse=4< /collapse->
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>
