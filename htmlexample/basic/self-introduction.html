@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>self_introduction</title>
+    <link rel="stylesheet" href="../css/selfPoster.css">
     <style>
         table,
         th,
@@ -11,32 +12,85 @@
         td {
             border: 5px solid #0f0f0f;
             border-collapse: collapse;
-            padding: 10px 20px;
+            padding: 10px 5px;
         }
+
         th {
             background-color: aqua;
         }
-        
     </style>
 </head>
 
 <body>
-    <h1>자기소개</h1>
-    <table>
-        <caption></caption>
-        <tr>
-            <th>이름</th>
-            <td>윤덕중</td>
-            <th>전화번호</th>
-            <td>010-0000-0000</td>
-            <th>나이</th>
-            <td>31살?</td>
-        </tr>
-        <tr>
-            <th>필요 자격증</th>
-            <td colspan="6">SQLD, CSTS, 정보보안기사, 정보관리기술사, OCJP, 빅데이터분석기사</td>
-        </tr>
-    </table>
+    <div id="container">
+        <h1>자기소개</h1>
+        <table>
+            <caption></caption>
+            <tr>
+                <th>이름</th>
+                <td>윤덕중</td>
+                <th>전화번호</th>
+                <td>010-0000-0000</td>
+                <th>나이</th>
+                <td>31살?</td>
+                <th>성별</th>
+                <td>
+                    <input type="radio" name="gender" id="man" value="man" checked />
+                    <label for="man">남자</label>
+                    <input type="radio" name="gender" id="woman" value="woman" />
+                    <label for="woman">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <th>자기 소개</th>
+                <td colspan="7">
+                    <dl>
+                        <dt>
+                            안녕하세요! 저는 솔루션엔지니어로 근무하다 직무에 대한 회의감을 느끼고
+                            새로운 업무를 다시 시작하고자 개발교육을 시작하게 되었습니다.
+                            실무경험이 있다고는 하지만, 주 업무가 리눅스/유닉스 기반의 통신솔루션 업무이기에
+                            웹개발과 관련해서는 이론상으로만 엿들은 수준이여서 모르는 것도 많습니다.
+                            많은 가르침 부탁드리며, 저도 제가 도와드릴 수 있는 부분이 있다면 도와드릴께요
+                            과정이 쉽지만은 않겠지만,
+                            다같이 윈윈할 수 있는 좋은 시간을 가질 수 있으면 좋겠어요. 잘 부탁드려요.
+
+                        </dt>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <th>필요 자격증</th>
+                <td colspan="7">SQLD, CSTS, 정보보안기사, 정보관리기술사</td>
+            </tr>
+            <tr>
+                <th>설명</th>
+                <td colspan="7">
+                    <dl>
+                        <dt>SQLD</dt>
+                        <dd>Kdata(한국데이터산업진흥원)[1]에서 주관하는 시험. SQL은 Structured Query Language) + D(Developer의 줄인 말로, SQL
+                            개발자를 의미한다. 2010년에 제1회 시험이 실시되었다. 공인자격 제 2013-02호에 해당하는 데이터베이스 SQL 국가공인 자격증이다.</dd>
+                        <dt>CSTS</dt>
+                        <dd>한국정보통신기술협회(TTA)에서 주관하는 자격증이다. 소프트웨어 테스트 기술이론 지식과 경험을 갖추고, 체계적으로 테스트 전략을 수립하며, 테스트 프로세스 활동을
+                            평가하고 개선하는 등 테스트 프로세스 전반을 관리할 수 있는 능력을 검증하는 시험이다.</dd>
+                        <dt>정보보안기사</dt>
+                        <dd>Engineer information security.<br />과학기술정보통신부에서 주관하고 한국방송통신전파진흥원[1]에서 시행하는 국가자격 시험 및 그 자격증을
+                            의미한다. 기존 한국인터넷진흥원 국가 공인 민간 자격증인 정보보호전문가(SIS) 자격증을 국가 기술 자격으로 업그레이드시킨 자격이다.</dd>
+                        <dt>정보관리기술사</dt>
+                        <dd>정보관리기술사(Professional Engineer Information Management)는 정보관리에 관련된 실무경험, 일반지식, 전문지식 및 응용능력과
+                            기술사로서의 지도감리능력, 자질 및 품위를 측정하여 수여되는 기술사 자격증으로 국가기술자격의 일종이다.</dd>
+                    </dl>
+                </td>
+            </tr>
+        </table>
+        <h2>좋아하는 이미지</h2>
+        <img src="../images/tree.jpg" width="700">
+        <p>이유</p>
+        <ul>
+            <li>몽환적이다</li>
+            <li>차분해진다.</li>
+            <li>화려하지않다.</li>
+        </ul>
+    </div>
 </body>
 
 </html>

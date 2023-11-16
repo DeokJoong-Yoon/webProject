@@ -1,0 +1,12 @@
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+table, th, td ,img{
+    border: 10px solid rgb(204, 238, 231);
+    border-collapse: collapse;
+    background-color: rgb(100, 247, 252)
+}
+th, td, img {
+    padding: 15px;
+}
