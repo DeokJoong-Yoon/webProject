@@ -1,0 +1,14 @@
+h1 {
+    background-color: black;
+    color: white;
+    width: 210px;
+    padding: 15px;
+    font: weight 900px;;
+}
+p {
+    margin: 0px auto 0px 20px
+}
+li {
+    list-style: none;
+    font-size: xx-large;
+}
