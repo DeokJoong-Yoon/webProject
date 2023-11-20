@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블록 레밸과 인라인 레벨</title>
+    <style>
+        h1 {
+            border: 1px solid black;
+            width: 400px;
+            padding: 40px;
+            box-sizing: border-box;
+            /* box-sizing: content-box; */
+        }
+        .account {
+            color: red;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>시간이란...</h1>
+    <div>내가 죽을 것처럼 <p class="account">오늘</p>을 살고</div>
+    <p>영원히 살 것 처럼 <br />내일을 꿈꾸어라.</p>
+    <br /><br />
+
+    <h1>시간이란...</h1>
+    <div>내일 죽을 것처럼 <span class="account">오늘</span>을 살고</div>
+    <p>영원히 살 것처럼 <br />내일을 꿈꾸어라. </p>
+</body>
+</html>
