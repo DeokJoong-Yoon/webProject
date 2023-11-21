@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴</title>
+    <style type="text/css">
+        ul {
+            list-style: none;
+        }
+        li {
+            padding: 5px 30px;
+        }
+        li a {
+            font-size: 16px;
+            text-decoration: none;
+            color:#000;
+        }
+        a[target="_blank"] {
+            padding-right: 30px;
+            background:url('../images/newwindow.png')no-repeat center right;
+        }
+        a[title] {
+            padding-left: 20px;
+        }
+        a[title |= "us"] {
+            background: url('../images/us.png') no-repeat left center;
+        }
+        a[title |= "ja"] {
+            background: url('../images/jp.png') no-repeat left center;
+        }
+        a[title |= "chn"] {
+            background: url('../images/ch.png') no-repeat left center;
+        }
+            
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="hhttps://html.spec.whatwg.org" target="_blank">HTML</a></li>        
+        <li><a href="https://www.w3.org/TR/selectors">CSS Selector Level 3</a></li>    
+        <li><a href="https://www.w3.org/TR/css3-mediaqueries">미디어쿼리</a></li>
+    </ul>
+
+    <ul>
+        <li>외국어 서비스 : </li>
+        <li><a href="#" title="us-english">영어</a></li>
+        <li><a href="#" title="ja"></a>일본어</li>
+        <li><a href="#" title="chn"></a>중국어</li>
+    </ul>
+</body>
+</html>

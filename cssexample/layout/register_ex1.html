@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 정보</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #ecc;
+            padding: 20px;
+        }
+        #login {
+            background-color: white;
+        }
+        ul {
+            margin-top: 0px;
+            list-style-type: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            line-height: 25px;
+            margin: 5px;
+        }
+
+        input {
+            width: 300px;
+        }
+
+        #submit button{
+            display: block;
+            border: 1px black solid;
+            width: 200px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 25px;
+        }
+        #submit input {
+            display:block;
+            margin: auto;
+        }
+        #submit fieldset{
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        <form action="">
+            <fieldset>
+                <legend>
+                    <h2>로그인 정보</h2>
+                </legend>
+                <ul>
+                    <div id="userId">
+                        <li>
+                            <label for="user_id">아이디</label>
+                            <input type="text" id="user_id" size="15" requred autofocus />
+                        </li>
+                    </div>
+                    <div id="userPassword">
+                        <li>
+                            <label for="user_passdword">비밀번호</label>
+                            <input type="password" id="user_password" size="15" requred />
+                        </li>
+                        <li>
+                            <label for="">비밀번호 확인</label>
+                            <input type="passwordConfirmed" id="passwordConfirmed" size="15" requred />
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <label for="grade">회원 등급 </label>
+                            <input type="text" id="grade" name="grade" value="준회원" readonly />
+                        </li>
+                    </div>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+    <div id="personalInfo">
+        <form action="">
+            <fieldset>
+                <legend>
+                    <h2>개인 정보</h2>
+                </legend>
+                <ul>
+                    <div id="userName">
+                        <li>
+                            <label for="userName">이름</label>
+                            <input type="text" id="userName" name="userName" />
+                        </li>
+                    </div>
+                    <div id="mail">
+                        <li>
+                            <label for="mail">메일 주소</label>
+                            <input type="email" id="main" name="main" />
+                        </li>
+                    </div>
+                    <div id="tel">
+                        <li>
+                            <label for="tel">연락처</label>
+                            <input type="tel" id="tel" name="tel">
+                        </li>
+                    </div>
+                </ul>
+            </fieldset>
+
+            <div id="submit">
+                <fieldset>
+                    <button type="submit">제출</button>
+                </fieldset>
+
+                <fieldset>
+                    <input type="submit" value="제출제출"/>
+                </fieldset>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

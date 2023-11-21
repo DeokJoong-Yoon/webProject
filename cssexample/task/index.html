@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tech</title>
+    <!-- <link rel="stylesheet" href="index.ccs"> -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        nav li {
+            margin: 20px;
+        }
+
+        nav li[title=java].focus {
+            background-color: aqua;
+        }
+
+        header h1 {
+            /* size checking */
+            border: 5px solid black;
+
+            /*h1 design*/
+            color: black;
+            width: 400px auto;
+            height: 50px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+
+        #grid {
+            /* size checking */
+            border: 5px solid pink;
+
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        #search>FORM {
+            /* size checking */
+            border: 5px solid aqua;
+
+            background: url('image/logo/google.png') no-repeat;
+            background-size: 50px;
+            padding: 0px 55px;
+            text-align: left;
+        }
+
+        #search p {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        section {
+            border-left: 5px solid black;
+            padding-left: 20px;
+        }
+
+        section ul li {
+            padding-top: 10px;
+            padding-bottom: 5px;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="search">
+            <h1><a href="index.html">Programmer 입문</a></h1>
+            <!--google search function-->
+            <FORM name=google_search action=http://www.google.co.kr/search method=get target="_blank"> <INPUT
+                    type="text" class="search_google" size=22 height=10 placeholder="검색은 여기서 하세요." name=query>  <INPUT
+                    type='submit' value=' 검색 '> </FORM>
+        </div>
+    </header>
+    <main id="grid">
+        <nav>
+            <ul>
+                <li><a href="index.html" title="java">Java</a></li>
+                <li><a href="index.html" title="html">HTML</a></li>
+                <li><a href="index.html" title="css">CSS</a></li>
+                <li><a href="index.html" title="javascript">JavaScript(준비중)</a></li>
+                <li><a href="index.html" title="network">Network</a></li>
+                <li><a href="index.html" title="database">Database (준비중)</a></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- 여기에 본문 작성 -->
+            <h1>HTML</h1>
+            <ul>
+                <li><a href="#korean">한글</a></li>
+                <li><a href="#english">영어</a></li>
+            </ul>
+            <p id="korean">
+
+            </p>
+            <p id="english">
+                The HyperText Markup Language or HTML is the standard markup language for documents designed to be
+                displayed in a web browser. It defines the meaning and structure of web content. It is often assisted by
+                technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+
+                Web browsers receive HTML documents from a web server or from local storage and render the documents
+                into multimedia web pages. HTML describes the structure of a web page semantically and originally
+                included cues for its appearance. </p>
+        </section>
+    </main>
+</body>
+
+</html>
