@@ -10,6 +10,9 @@
             margin: 0px;
             padding: 0px;
         }
+        body {
+            background-color: rgb(241, 236, 236);
+        }
 
         a {
             text-decoration: none;
@@ -31,11 +34,9 @@
         }
 
         header h1 {
-            /* size checking */
-            border: 5px solid black;
-
             /*h1 design*/
             color: black;
+            text-shadow: 10px 10px 5px rgb(156, 141, 141);
             width: 400px auto;
             height: 50px;
             padding-top: 20px;
@@ -46,16 +47,13 @@
 
         #grid {
             /* size checking */
-            border: 5px solid pink;
-
+            border-top: 2px solid black;
             display: grid;
             grid-template-columns: 1fr 3fr;
         }
 
         #search>FORM {
             /* size checking */
-            border: 5px solid aqua;
-
             background: url('image/logo/google.png') no-repeat;
             background-size: 50px;
             padding: 0px 55px;
@@ -67,7 +65,7 @@
         }
 
         section {
-            border-left: 5px solid black;
+            border-left: 2px solid black;
             padding-left: 20px;
         }
 
@@ -85,20 +83,18 @@
         <div id="search">
             <h1><a href="index.html">Programmer 입문</a></h1>
             <!--google search function-->
-            <FORM name=google_search action=http://www.google.co.kr/search method=get target="_blank"> <INPUT
-                    type="text" class="search_google" size=22 height=10 placeholder="검색은 여기서 하세요." name=query>  <INPUT
-                    type='submit' value=' 검색 '> </FORM>
+            <FORM name=google_search action=http://www.google.co.kr/search method=get target="_blank">
+                <INPUT type="text" class="search_google" size=22 height=10 placeholder="검색은 여기서 하세요." name=query> 
+                <INPUT type='submit' value=' 검색 '>
+            </FORM>
         </div>
     </header>
     <main id="grid">
         <nav>
             <ul>
-                <li><a href="index.html" title="java">Java</a></li>
                 <li><a href="index.html" title="html">HTML</a></li>
                 <li><a href="index.html" title="css">CSS</a></li>
-                <li><a href="index.html" title="javascript">JavaScript(준비중)</a></li>
-                <li><a href="index.html" title="network">Network</a></li>
-                <li><a href="index.html" title="database">Database (준비중)</a></li>
+                <li><a href="index.html" title="javascript">JavaScript</a></li>
             </ul>
         </nav>
         <section>
@@ -109,8 +105,13 @@
                 <li><a href="#english">영어</a></li>
             </ul>
             <p id="korean">
-
+                하이퍼 텍스트 마크업 언어(영어: Hyper Text Markup Language, HTML, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)는 웹 페이지 표시를 위해 개발된 지배적인
+                마크업 언어다. 또한, HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을
+                제공한다. 그리고 이미지와 객체를 내장하여 대화형 양식을 생성하는 데 사용될 수 있다. HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 "태그"로 되어있는 HTML 요소 형태로
+                작성한다. HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트, 본문과 그 밖의 항목의 외관과 배치를 정의하는 CSS 같은 스크립트를 포함하거나 불러올 수
+                있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여 CSS의 사용을 권장한다.
             </p>
+            <br /><br />
             <p id="english">
                 The HyperText Markup Language or HTML is the standard markup language for documents designed to be
                 displayed in a web browser. It defines the meaning and structure of web content. It is often assisted by
@@ -118,7 +119,8 @@
 
                 Web browsers receive HTML documents from a web server or from local storage and render the documents
                 into multimedia web pages. HTML describes the structure of a web page semantically and originally
-                included cues for its appearance. </p>
+                included cues for its appearance.
+            </p>
         </section>
     </main>
 </body>

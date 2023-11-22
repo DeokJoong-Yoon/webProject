@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <title>02_데이터입출력 - 02_dataio.html</title>
+    <style>
+        
+    </style>
+    <script src="../js/02_javascript_basic.js"></script>
+</head>
+<body>
+
+    <h1>자바스크립트에서의 데이터 입/출력</h1>
+    <!-- 
+        * window : 자바스크립트 내장 객체로 브라우저 창이 열릴때마다 하나씩 만들어지는 객체
+        브라우저 창 안에 존재하는 모든 요소들의 최상위 객체(생략가능)
+
+        * document : 웹 문서마다 하나씩 만들어지는 객체 (html문서에 대한 정보들을 가지고 있음)
+     -->
+
+     <h2> 1. 데이터 출력하는 구문</h2>
+     <pre>
+        1) [window.]alert("알림창에 출력할 문구");
+        2) console.log("콘솔창에 출력할 문구");
+        3) document.write("화면상에 출력할 문구");
+        4) 선택한요소.innerText = "요소에 출력할 문구";
+        5) 선택한요소.innerHTML = "요소에 출력할 문구"; <!--5번을 제일 많이 활용함-->
+     </pre>
+     <hr />
+
+     <h3>1) window.alert("내용")</h3>
+     <pre>
+        - alert("");
+        - 브라우저에 대화상자를 띄우는 함수
+     </pre>
+    
+     <!-- 클릭시 "alert 버튼 클릭됨" 대화상자 출력 -->
+     <button type="button" onclick="fnAlert()">alert 확인</button>
+     <hr />
+
+     <h3>3) document.write("내용")</h3>
+     <button type="button" onclick="documentWrite()">document 확인</button>
+     <hr /> <!-- 버튼을 눌렀을 때 작동하므로 대소문자 틀려도 이클립스처럼 빨간색 밑줄로 오류라고 나오지 않음-->
+            <!-- 개발자도구(F12)를 활용하면 어디서 오류가 났는지 볼 수 있음 -->
+     <h3>4) innerText</h3>
+     <pre>
+        자바스크립트에서 요소에 작성된 내용을 읽어들이거나 변경하는 속성
+        
+        - 내용을 읽어올 때 태그는 모두 무시함.
+        - 내용을 변경할 때 태그는 문자열 자체로 해석됨. (태그 해석 X)
+
+     </pre>
+
+     <button type="button" onclick="getInnerText()">innerText로 읽어오기</button>
+     <button type="button" onclick="setInnerText()">innerText로 변경하기</button>
+
+     <p id="test1" class="box">
+        테스트1 입니다.
+        <br />
+        <strong>안녕하세요?</strong>
+     </p>
+     <hr />
+
+     <h3>5) innerHTML</h3>
+     <pre>
+        자바스크립트에서 요소 전체를(태그 + 속성 + 내용) 읽어들이거나 변경하는 속성
+        - 내용을 읽어올 때 태그 + 속성도 모두 포함함
+        - 내용을 변경할 때 태그는 HTML요소로 해석됨 (태그 해석 O)
+     </pre>
+
+     <button type="button" onclick="getInnerHTML1()">innerHTML로 읽어오기</button>
+     <button type="button" onclick="setInnerHTML1()">innerHTML로 변경하기</button>
+
+     <p id="test2" class="box">
+        테스트2 입니다.
+        <br />
+        <strong>안녕하세요?</strong>
+     </p>
+     <hr />
+</body>
+</html>

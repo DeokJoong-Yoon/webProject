@@ -1,0 +1,66 @@
+
+#signup {
+    width: 400px;
+    background: #fff;
+    border: 1px solid #222; /* 테두리선 */
+    border-radius: 5px; /* 테두리선 둥글게 */
+    padding: 20px;
+    margin: 30px auto; /* margin의 auto는 중앙 배치 */
+}
+
+#signup fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+#signup legend {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#signup ul li {
+    list-style: none;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+
+#signup label {    
+    font-size: 13px;
+    width: 110px;
+}
+
+/* #signup input[type=text], input[type=tel] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    width: 200px;
+} */
+
+#signup input:not[type=radio] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    width: 200px;
+}
+#signup input:not([type=radio]):hover {
+    border-color: #f00;
+}
+/* input 요소에 checked 속성이 추가되었을 떄 */ /* checked는 radio 박스와 체크박스에만 쓸 수 있음 */
+#signup input:checked + label { /* 형제 요소중에 label을 만나면 이걸 적용하겠다 */
+    color: red;
+    font-weight: bold;
+}
+
+#signup button {
+    border: 1px solid #222;
+    border-radius: 20px;
+    display: block;
+    font: 16px 맑은고딕,굴림,돋움;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+}
