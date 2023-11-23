@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tech</title>
+    <!-- <link rel="stylesheet" href="index.ccs"> -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-color: rgb(241, 236, 236);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        nav li {
+            margin: 20px;
+        }
+
+        nav li[title=java].focus {
+            background-color: aqua;
+        }
+
+        header h1 {
+            /*h1 design*/
+            color: black;
+            text-shadow: 10px 10px 5px rgb(156, 141, 141);
+            width: 400px auto;
+            height: 50px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+
+        #grid {
+            /* size checking */
+            border-top: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        #search>FORM {
+            /* size checking */
+            background: url('image/logo/google.png') no-repeat;
+            background-size: 50px;
+            padding: 0px 55px;
+            text-align: left;
+        }
+
+        #search p {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        section {
+            border-left: 2px solid black;
+            padding-left: 20px;
+        }
+
+        section ul li {
+            padding-top: 10px;
+            padding-bottom: 5px;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="search">
+            <h1><a href="index.html">Programmer 입문</a></h1>
+            <!--google search function-->
+            <FORM name=google_search action=http://www.google.co.kr/search method=get target="_blank">
+                <INPUT type="text" class="search_google" size=22 height=10 placeholder="검색은 여기서 하세요." name=query> 
+                <INPUT type='submit' value=' 검색 '>
+            </FORM>
+        </div>
+    </header>
+    <main id="grid">
+        <nav>
+            <ul>
+                <li><a href="html.html" title="html">HTML</a></li>
+                <li><a href="index.html" title="javascript">JavaScript</a></li>
+                <li><a href="java.html" title="java">Java</a></li>
+                <li><a href="C.html" title="C">C</a></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- 여기에 본문 작성 -->
+            <h1>C</h1>
+            <ul>
+                <li><a href="#korean">한글</a></li>
+                <li><a href="#english">영어</a></li>
+            </ul>
+            <p id="korean">
+                C는 1972년 켄 톰슨과 데니스 리치가 벨 연구소에서 일할 당시 새로 개발된 유닉스 운영 체제에서 사용하기 위해 개발한 프로그래밍 언어이다. 켄 톰슨은 BCPL언어를 필요에 맞추어 개조해서 "B"언어(언어를 개발한 벨 연구소의 B를 따서)라 명명했고, 데니스 리치가 이것을 개선하여 C 언어가 탄생했다. <br>유닉스 시스템의 바탕 프로그램은 모두 C로 작성되었고, 수많은 운영 체제의 커널 또한 C로 만들어졌다. 오늘날 많이 쓰이는 C++는 C에서 파생된 객체 지향형 언어이다.
+
+               <br> 이는 오늘날의 널리 쓰이는 거의 모든 운영 체제 커널이 C를 이용해 구현된 이유이기도 하다. 이처럼 C는 시스템 프로그램 개발에 매우 적합하지만, 응용 프로그램 개발에도 많이 쓰이기도 한다.
+            </p>
+            <br /><br />
+            <h3>- 입문 강의</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PFc4g8mxOiI?si=oYsxf3eeZoIO2bsm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br /><br />
+            <iframe width="1800" height="500" src="https://www.tcpschool.com/examples/tryit/tryC.php?filename=c_intro_program_01" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <br /><br />
+            <p id="english">
+                C (pronounced /ˈsiː/ – like the letter c) is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems, device drivers, and protocol stacks, but its use in application software has been decreasing. C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.
+
+A successor to the programming language B, C was originally developed at Bell Labs by Ritchie between 1972 and 1973 to construct utilities running on Unix. It was applied to re-implementing the kernel of the Unix operating system. During the 1980s, C gradually gained popularity. It has become one of the most widely used programming languages, with C compilers available for practically all modern computer architectures and operating systems. The book The C Programming Language, co-authored by the original language designer, served for many years as the de facto standard for the language. C has been standardized since 1989 by the American National Standards Institute (ANSI) and the International Organization for Standardization (ISO).
+
+C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. Despite its low-level capabilities, the language was designed to encourage cross-platform programming. A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code.
+
+Since 2000, C has consistently ranked among the top two languages in the TIOBE index, a measure of the popularity of programming languages.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>06_function(사용자 정의 함수) - 06_function.html</title>
+   <style>
+      div {
+         border: 1px solid black;
+         display: inline-block;
+         padding: 20px;
+      }
+   </style>
+   <script src="../js/06_function.js"></script>
+</head>
+
+<body>
+   <h3>기본적인 함수의 선언, 정의, 호출</h3>
+   <pre>
+      <code>
+         function 함수명(매개변수){ // 함수 선언
+            
+            // 함수 정의
+         }
+
+         함수명(); // 함수 호출
+      </code>
+   </pre>
+
+   <h5>div 태그 클릭시 카운팅되도록 제어</h5>
+   <!-- <div id="btn1" onclick="clickCount()">0</div> -->
+   <!-- 매개변수 this : 클릭된 요소(이벤트가 발생한 자기자신을)(를) 의미 -->
+   <div id="btn1" onclick="clickCount(this)">0</div>
+
+   <h5>두수의 합구하기</h5>
+   <input type="text" id="number1" maxlength="3" />
+   <label> + </label>
+   <input type="text" id="number2" maxlength="3" />
+   <button type="button" onclick="add()"> = </button>
+   <input type="text" id="result" readonly />
+</body>
+
+</html>
