@@ -1,0 +1,17 @@
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+form {
+    width: 500px;
+
+}
+input, select {
+    margin-left: 50px;
+    
+}
+input[type="checkbox"] {
+}
+div {
+   text-align: center ;
+}
