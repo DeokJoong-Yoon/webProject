@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form - from.html</title>
+    <!-- <link rel="shortcut icon" href="../images/icon.png"> -->
+    <link rel="shortcut icon" href="../images/bg0.jpg">
+    <!-- <link rel="stylesheet" href="../ccs/form_add.css"> -->
+    <script src="../js/form_add.js"></script>
+</head>
+<body>
+    <form name="form1" id="form1" action="join.jsp" method="post">
+        <!-- 인라인으로 이벤트를 부여한다면 onsubmit="return doSubmit();"-->
+        <div id="member">
+            <fieldset>
+                <legend>회원가입</legend>
+                <div class="input_group">
+                    <label>이름<span>*</span></label>
+                    <input type="text" name="user_name" id="user_name" />
+                 </div>
+                <div class="input_group">
+                    <label>성별<span>*</span></label>
+                    <label><input type="radio" name="gender" value="남자"> 남자</label>
+                    <label><input type="radio" name="gender" value="여자"> 여자</label>
+                </div>
+                <div class="input_group">
+                    <label>직업<span>*</span></label>
+                    <select name="job" id="job">
+                        <option>----- 선택하세요 ------</option>
+                        <option value="프로그래머">프로그래머</option>
+                        <option value="퍼블리셔">퍼블리셔</option>
+                        <option value="학생">학생</option>
+                    </select>
+                </div>
+                <div class="input_group">
+                    <label>취미</label>
+                    <label><input type="checkbox" name="hobby" value="개발">개발</label>
+                    <label><input type="checkbox" name="hobby" value="걷기">걷기</label>
+                    <label><input type="checkbox" name="hobby" value="축구">축구</label>
+                    <label><input type="checkbox" name="hobby" value="농구">농구</label>
+                    <label><input type="checkbox" name="hobby" value="야구">야구</label>
+                    <label><input type="checkbox" name="hobby" value="여행">여행</label>
+                    <label><input type="checkbox" name="hobby" value="영화">영화</label>
+                </div>
+                <!-- <div class="input_group">-->
+                <div class="input_group">
+                    <span>
+                        <!-- <input type="submit" value="가입" /> -->
+                        <input type="button" id="sendBtn" value="가입" />
+                        <!-- <button type="submit">가입</button>
+                        <button type="button" id="sendBtn">가입</button> -->
+                        <input type="reset" value="초기화" />
+                    </span>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

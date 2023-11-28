@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈쇼핑</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        section {
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .cart {
+            border: 1px solid #333;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>홈쇼핑 웹페이지</h1>
+    </header>
+
+    <section>
+        <h2>인기 상품</h2>
+        <div class="product-grid">
+            <div class="product">
+                <h3>상품 1</h3>
+                <p>이 상품은 최고의 품질로 제공됩니다. 가격: $50</p>
+                <button onclick="addToCart('상품 1', 50)">장바구니에 추가</button>
+            </div>
+            <div class="product">
+                <h3>상품 2</h3>
+                <p>특별 가격! 이 기회를 놓치지 마세요. 가격: $30</p>
+                <button onclick="addToCart('상품 2', 30)">장바구니에 추가</button>
+            </div>
+            <!-- 다른 상품들도 추가 가능 -->
+        </div>
+    </section>
+
+    <section>
+        <h2>장바구니</h2>
+        <div class="cart" id="cart">
+            <!-- 여기에 장바구니 아이템이 추가될 것입니다. -->
+        </div>
+        <button onclick="checkout()">결제하기</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 홈쇼핑. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cartItems = [];
+
+        function addToCart(productName, price) {
+            cartItems.push({ productName, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartElement = document.getElementById('cart');
+            cartElement.innerHTML = ''; // 장바구니 초기화
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `${item.productName} - $${item.price}`;
+                cartElement.appendChild(itemElement);
+            });
+        }
+
+        function checkout() {
+            // 여기에 결제 로직을 추가할 수 있습니다.
+            alert('결제가 완료되었습니다!');
+            cartItems = []; // 결제 후 장바구니 비우기
+            updateCart();
+        }
+    </script>
+
+</body>
+</html>

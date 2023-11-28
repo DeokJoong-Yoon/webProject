@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form - from.html</title>
+    <!-- <link rel="shortcut icon" href="../images/icon.png"> -->
+    <link rel="shortcut icon" href="../images/bg0.jpg">
+    <!-- <link rel="stylesheet" href="../ccs/form_add.css"> -->
+    <script src="../js/book_cal.js"></script>
+</head>
+<body>
+    <form>
+        <table>
+            <caption>서적 주문서 작성</caption>
+            <tr>
+                <th>책 제목</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>합계</th>
+            </tr>
+            <tr>
+                <td>멀티미디어 배움터2.0</td>
+                <td id="multimediaprice" class="cPrice">25,000</td>
+                <td><input type="text" value="0" id="multimediaCount" class="cCount"></td>
+                <td><input type="text" value="0" id="multimediaTotal" class="cSum">원</td>
+            </tr>
+            <tr>
+                <td>모바일 멀티미디어</td>
+                <td id="mobileprice" class="cPrice">25,000</td>
+                <td><input type="text" value="0" id="mobileCount" class="cCount"></td>
+                <td><input type="text" value="0" id="mobileTotal" class="cSum">원</td>
+            </tr>
+            <tr>
+                <td>자바입문: 입문과 실습</td>
+                <td id="javaprice" class="cPrice">25,000</td>
+                <td><input type="text" value="0" id="javaCount" class="cCount"></td>
+                <td><input type="text" value="0" id="javaTotal" class="cSum">원</td>
+            </tr>
+            <tr>
+                <td>합계</td>
+                <td></td>
+                <td><input type="text" value="0" id="totalCount"></td>
+                <td><input type="text" value="0" id="total">원</td>
+            </tr>
+        </table>
+        <input type="button" id="sumCal" value="합계계산" />
+        <input type="reset" value="초기화" />        
+    </form>
+</body>
+
+</html>
