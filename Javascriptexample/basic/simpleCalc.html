@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleCalc.html</title>
+    <link rel="stylesheet" href="../css/simpleCalc.css" />
+    <script src="../js/simpleCalc.js"></script>
+    <script src="../js/Calc.js"></script>
+</head>
+
+<body>
+    <!-- 간단한 계산기 객체 생성(Calc 객체 선언 및 생성).
+    - 두개의 숫자를 입력 받을 수 있는 프로퍼티(속성, 필드) 초기화. 
+    - 덧셈(plus)과 뺄셈(minus)의 결과를 리턴 해 줄 수 있도록 메서드 생성. 추후 곱셈과 나눗셈도 추가해 주시면 됩니다
+    - 연산의 결과(result)를 출력하는 메서드 생성. 
+    -->
+    <h1>두수의 연산</h1>
+    <div>
+        <input type="text" id="number1" />
+        <select name="" id="operator">
+            <option value="plus" id="plus">+</option>
+            <option value="minus" id="minus">-</option>
+        </select>
+        <input type="text" id="number2" />
+        =
+        <span id="result" style="font-size: larger;">?</span>
+    </div>
+</body>
+
+</html>

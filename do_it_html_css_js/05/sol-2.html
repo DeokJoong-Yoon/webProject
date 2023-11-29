@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sol-2.css">
+    <title>5장 마무리 문제 - 02</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <h1>프론트엔드 개발자 지원서</h1>
+            <p>HTML, cSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+            <hr />
+            <h4>개인 정보</h4>
+            <ul id="private">
+                <li>
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" placeholder="공백 없이 입력하세요." />
+                </li>
+                <li>
+                    <label for="user_telNumber">연락처</label>
+                    <input type="tel" id="user_telNumber" />
+                </li>
+            </ul>
+            <h4>지원 분야</h4>
+            <ul>
+                <li>
+                    <input type="radio" id="publishing" name="domain" />
+                    <label for="publishing">웹퍼블리싱</label>
+                </li>
+                <li>
+                    <input type="radio" id="webDev" name="domain" />
+                    <label for="webDev">웹 어플리케이션 개발</label>
+                </li>
+                <li>
+                    <input type="radio" id="DevM" name="domain" />
+                    <label for="DevM">개발 환경 개선</label>
+                </li>
+            </ul>
+            <label for="motive">
+                <h4>지원 동기</h4>
+                <textarea name="motive" id="motive" cols="60" rows="5" placeholder="본사 지원 동기를  간략히 써 주세요."></textarea>
+            </label>
+            <div>
+                <button type="submit">접수하기</button>
+                <button type="reset">다시 쓰기</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

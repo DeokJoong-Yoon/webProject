@@ -1,0 +1,11 @@
+form {
+    width: 800px;
+    margin: auto;
+}
+ul {
+    list-style: none;
+}
+ul[id="private"] label {
+    width: 100px;
+    display: inline-block;
+}
