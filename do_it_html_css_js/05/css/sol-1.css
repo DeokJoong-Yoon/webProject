@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 20px;
+}
+li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+ul {
+    padding-left: 20px;
+}
+form {
+    width: 600px;
+    border:1px solid grey;
+    margin: 10px;
+}
+ul label {
+    width: 100px;
+    float:left;
+}
+button {
+    width: 100px;
+    margin: 20px auto;
+}
+div {
+    text-align: center;
+}
