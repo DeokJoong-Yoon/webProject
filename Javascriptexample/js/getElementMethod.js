@@ -48,4 +48,15 @@ window.onload = function () {
             e.parentNode.style.textDecoration = "line-through";
         });
     });
+
+    document.getElementById("choice").addEventListener("click", function () {
+        let ul = document.getElementsByTagName("ul"); // 요소명
+        let text = "";
+        let li = ul[2].getElementsByTagName("li");
+        for (i = 0; i < li.length; ++i) {
+            text += li[i].innerHTML;
+            text += "&nbsp;&nbsp;"
+        }
+        document.getElementById("area").innerHTML = text;
+    });
 }
