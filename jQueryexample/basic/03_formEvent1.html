@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_formEvent.html</title>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/03_formEvent.js"></script>
+    <link rel="stylesheet" href="../css/03_formEvent.css" />
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <form name="join" id="join">
+        <div class="input_group">
+            <label>아이디</label>
+            <input type="text" name="user_id" id="user_id" placeholder="아이디 입력"/>
+            <label class="requre"><small>(첫글자는)</small></label>
+        </div>
+        <div class="input_group">
+            <label>비밀번호</label>
+            <input type="text" name="user_pw" id="user_pw" />
+        </div>
+        <div class="input_group">
+            <label>비밀번호 확인</label>
+            <input type="text" name="user_pw2" id="user_pw2" />
+        </div>
+        <div class="input_group">
+            <label>성별</label>
+            <label><input type="checkbox" name="gender" value="남자">남자</label>
+            <label><input type="checkbox" name="gender" value="여자">여자</label>
+        </div>
+        <div class="input_group">
+            <label>이메일</label>
+            <input type="text" name="email" id="email" />
+            <strong>@</strong>
+            <input type="text" name="emailDomain" id="emailDomain" readonly="readonly" />
+            <select name="emailAddress" id="emailAddress">
+                <option value="">선택</option>
+                <option value="naver.com">naver</option>
+                <option value="nate.com">nate</option>
+                <option value="daum.net">daum</option>
+                <option value="gmail.com">gmail</option>
+                <option value="">직접입력</option>
+            </select>
+            <div class="input_group">
+                <label>핸드폰 번호</label>
+                <input type="tel" name="hpno" id="hpno" />
+            </div>
+            <div class="input_group">
+                <label>취미<input type="checkbox" id="all_check" value="Y" /></label>
+                <label><input type="checkbox" value="걷기" name="hobby" class="hobby_check">걷기</label>
+                <label><input type="checkbox" value="축구" name="hobby" class="hobby_check">축구</label>
+                <label><input type="checkbox" value="농구" name="hobby" class="hobby_check">농구</label>
+                <label><input type="checkbox" value="야구" name="hobby" class="hobby_check">야구</label>
+                <label><input type="checkbox" value="여행" name="hobby" class="hobby_check">여행</label>
+                <label><input type="checkbox" value="영화" name="hobby" class="hobby_check">영화</label>
+            </div>
+            <div class="input_group">
+                <label>직업</label>
+                <select name="job" id="job">
+                    <option>----- 선택하세요 -----</option>
+                    <option value="프로그래머">프로그래머</option>
+                    <option value="퍼블리셔">퍼블리셔</option>
+                    <option value="디자이너">디자이너</option>
+                    <option value="기획자">기획자</option>
+                    <option value="학생">학생</option>
+                </select>
+            </div>
+        </div>
+        <div class="input_group">
+            <span>
+                <!-- <button type="submit" class="myButton">회원가입</button> -->
+                <button type="button" id="sendBtn" class="myButton">회원가입</button>
+                <button type="reset" class="myButton">다시작성</button>
+                <!-- <button type="button" id="resetBtn" class="myButton">다시작성</button> -->
+            </span>
+        </div>
+    </form>
+    <div id="formResult"></div>
+
+</body>
+
+</html>
