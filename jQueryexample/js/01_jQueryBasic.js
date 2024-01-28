@@ -58,7 +58,7 @@ $(function() {
     });
 
     let regExp = /^[a-z][a-zA-Z0-9]{7,19}$/;
-    $("#input1").on("keyup", function() {
+    $("#input1").on("keyup", function() {   
         // on() == addEventListener
         // -> 특정 이벤트 발생 시 동작(이벤트 핸들러) 지정
         // 특히 동적 요소에 이벤트 설정 시 사용.
