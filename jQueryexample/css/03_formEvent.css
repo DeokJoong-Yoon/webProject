@@ -7,11 +7,11 @@ h1 {
 }
 form {
     border:1px solid black;
-    width: 550px;
+    width: 600px;
     margin: 30px auto;
 }
 li {
-    list-style-type: none;
+    /* list-style-type: none; */
     padding:10px;
     margin-bottom: 10px;
 }
