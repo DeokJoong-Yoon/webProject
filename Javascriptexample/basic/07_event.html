@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>07_이벤트 - 07_event.html</title>
+   <style>
+      a:link,
+      a:visited {
+         color: black;
+         text-decoration: none;
+      }
+
+      ul {
+         list-style: none;
+         width: 800px;
+         padding: 0;
+      }
+
+      li {
+         display: inline-block;
+         width: 120px;
+         border: 1px solid #ccc;
+         padding: 10px 15px;
+         font-size: 16px;
+         text-align: center;
+      }
+
+      #result {
+         width: 500px;
+         height: 300px;
+         border: 2px solid #ccc;
+         border-radius: 15px;
+      }
+      #div1 {
+         width: 300px;
+         height: 300px;
+         border: 1px solid black;
+      }
+      #test3 {
+         width: 200px;
+         height: 200px;
+         border: 1px solid black;
+         background-color: pink;
+         cursor: pointer;
+      }
+   </style>
+
+</head>
+
+<body>
+   <h1>이벤트(Event)</h1>
+
+   <pre>
+      이벤트(Event) : 동작, 행위
+      -> 브라우저에서의 동작, 행위 : clieck, keydown, keyup, mouseover, submit, change ...
+
+      이벤트 리스터(Event Listner)
+      -> 이벤트가 발생하는 것을 대기학 ㅗ있다가
+         이벤트가 발생ㅇ하는 것이 감지되면 연결된 기능(함수)를 수행하는 것
+         ex) onclick, onkeyup, onchange, onsubmit... (on 이벤트명)
+         onclick = "함수명()"
+
+      이벤트 핸들러(Event Handler)
+      -> 이벤트 리스너에 연결된 기능으로
+         이벤트 발생 시 수행하고자 하는 내용을 작성해둔 함수(function)
+   </pre>
+   <hr />
+
+   <h3>인라인 이벤트 모델</h3>
+   <pre>
+      요소 내부에 이벤트를 작성하는 방법으로
+      on이벤트명 = 함수명() 형태로 작성함
+   </pre>
+
+   <button type="button" onclick="test1(this)">인라인 이벤트 모델 확인</button>
+
+   <ul>
+      <li><a href="#" onclick="changeBg('green')">Green</a></li>
+      <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+      <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+   </ul>
+   <div id="result"></div>
+
+   <h5>넌센스 퀴즈</h5>
+   <ul id="nonsense">
+      <li onmouseover="answerCheck('꿈을 갖기 위해서')" onmouseout="answerCheck('')">
+         우리가 수업시간에 자는 자유는
+      </li>
+      <li onmouseover="answerCheck('교도소')" onmouseout="answerCheck('')">
+         도둑이 없는 도둑 말은은 어딘가?
+      </li>
+      <li onmouseover="answerCheck('오목')" onmouseout="answerCheck('')">
+         다섯 그루의 나무를 심으면?
+      </li>
+      <li onmouseover="answerCheck('독수리 오형제')" onmouseout="answerCheck('')">
+         콩쥐의 깨진 독을 수리해준 사람은?
+      </li>
+      </li>
+   </ul>
+   <div id="answer">정답 보여주기</div>
+
+   <h5>넌센스 퀴즈</h5>
+   <img id="quiz" src="../images/1.jpg" onclick="imageChange()" />
+
+   <h3>고전 이벤트 모델</h3>
+   <pre>
+        요소가 가지고 있는 이벤트 속성(이벤트 리스너)에 이벤트 핸들러를 연결하는 방법으로
+
+        인라인 모델처럼 HTML 요소에 JS 코드가 포함되는 것이 아닌
+        script내에서 이벤트 관련 코드를 작성할 수 있다.
+    </pre>
+   <h3>표준 이벤트 모델(addEventListener)</h3>
+   <pre>
+        - W3C (HTML, CSS , JS 웹표준 재정 단체)에서
+          공식적으로 지정한 이벤트 모델(이벤트 동작 지정 방법)
+
+        - 한 요소에 여러 이벤트 핸들러를 설정할 수 있다.
+    </pre>
+
+   <button type="button" id="btn1">고전 이벤트 모델 확인</button>
+   <p>노력은 결코 배신하지 않는다.</p>
+
+   <button type="button" id="test2-1">고전 이벤트 모델 확인</button>
+   <button type="button" id="test2-2">test2-1 이벤트 제거</button>
+   <button type="button" id="test2-3">고전 이벤트 모델 단점</button>
+
+   <hr />
+
+   <h3>표준 이벤트 모델(addEventListener)</h3>
+   <pre>
+      - W3C (HTML, CSS, JS 웹표준 재정단체)에서
+         공식적으로 지정한 이벤트 모델(이벤트 동작 지정 방법)
+
+      - 한 요소에 여러 이벤트 핸들러를 설정할 수 있다.
+    </pre>
+
+   <div id="test3">클릭하면 크기가 늘어나요~</div>
+   <hr />
+
+   <h3>이벤트 예제</h3>
+
+   <h5>커서 이동</h5>
+   <form name="form3" id="form3">
+      <label>주민등록번호 : </label>
+      <input type="text" name="jumin1" id="jumin1" />
+      <label>-</label>
+      <input type="password" name="jumin2" id="jumin2" maxlength="1" />******
+   </form>
+
+   <div id="div1"></div>
+   <input type="text" id="input1" />
+   <button id="changeBtn1"> 변경</button>
+   <hr />
+
+   <h1>HTML요소 기본 이벤트 제거</h1>
+
+   <h3>a태그 기본 이벤트 제거</h3>
+   <a href="https://www.naver.com" id="goNaver">네이버 이동</a>
+
+
+
+
+
+
+
+   <script src="../js/07_event.js"></script>
+</body>
+
+</html>

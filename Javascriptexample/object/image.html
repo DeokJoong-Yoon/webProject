@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image객체 - image.html</title>
+    <script src="../js/image.js"></script>
+    <link rel="stylesheet" href="../css/image.css">
+</head>
+
+<body>
+   <!-- 각 이미지 클릭했을 경우, target 이미지 파일 변경-->
+    <ul class="thumbnail">
+        <li>
+            <img src="../images/1.jpg" class="imageChoice" />
+        </li>
+        <li>
+            <img src="../images/2.jpg" class="imageChoice" />
+        </li>
+        <li>
+            <img src="../images/3.jpg" class="imageChoice" />
+        </li>
+    </ul>
+    <div class="view">
+        <img src="../images/1.jpg" id="target" />
+        
+    </div>
+
+    <!-- 1초 간격으로 새로운 이미지 변경하기-->
+    <div class="newView">
+        <h3>1초 간격으로 새로운 이미지 보여주기</h3>
+        <p>
+            <img src="../images/1.jpg" id="imgView" />
+        </p>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script type="text/javascript">
+        document.write("<h3>배열 생성 </h3>");
+        // Array 객체로 배열 생성
+        // let myArray = new Array("자바, "자바스크립트", "스프링");
+        // 리터럴을 이용한 배열 생성(아래의 방법도 사용 가능합니다.)
+        let myArray = ["자바", "자바스크립트", "스프링"];
+
+        // 배열에 저장된 값들을 읽기 - 반복문
+        document.write("<h6>" + myArray[0] + "<h6>");
+        document.write("<h6>" + myArray[1] + "<h6>");
+        document.write("<h6>" + myArray[2] + "<h6>");
+
+        for (let i = 0; i < myArray.length; ++i) {
+            document.write("<h6>" + myArray[i] + "<h6>");
+        }
+
+        document.write("<h3>빈 배열 생성</h3>");
+        // 빈 배열의 생성
+        // let myArray1 = new Array();
+        // 아래의 방법도 사용 가능합니다.
+        let myArray1 = [];
+        document.write("myArray1 배열의 길이 : " + myArray1.length + "<br />");
+        // 반복문을 통하여 배열의 크기를 확장하고 값을 저장
+        // for (let i = 0; i < 10; ++i) {
+        //     myArray1[i] = i;
+        // }
+        for (let i = 0; i < 10; ++i) {
+            // myArray1[i] = i;
+            myArray1.push(i);
+        }
+        document.write("myArray1 배열의 길이 : " + myArray1.length + "<br />");
+
+        // 반복문을 배열의 길이만큼 반복하도록 설정하고 값을 출력
+        for (i = 0; i < myArray1.length; ++i) {
+            document.write(myArray1[i] + " ");
+        }
+        document.write("<br />");
+
+        document.write("<h3>join() 메서드로 출력</h3>");
+        document.write("<p>" + myArray1.join(" ") + "</p>");
+
+        document.write("<h3>sort() 메서드로 출력</h3>");
+        let myArray2 = [10, 7, 23, 99, 169, 19, 11, 1];
+        myArray2.sort();
+        document.write("<p>" + myArray2.join("/") + "</p>");
+
+        let myArray3 = [10, 7, 23, 99, 169, 19, 11, 1];
+        myArray3.sort(function (a, b) { return a - b; });
+        document.write("<p>오름차순 : " + myArray3.join(" , ") + "</p>");
+
+        // 출력 함수 생성 - print_array(배열, 출력시 사용할 배열명)
+        function print_array(a, name) {
+            document.write("Size of array : " + a.length + "<br />");
+            for (i = 0; i < a.length; ++i) {
+                document.write(name + "[" + i + "] : ");
+                if (typeof (a[i]) == "string")
+                    document.write("\"" + a[i] + "\" <br />");
+                else
+                    document.write(a[i] + " <br />");
+            }
+            document.write(" <br />");
+        }
+
+        let array = new Array("one", 2, "3", 4, "five");
+        // let array = ["one", 2, "3", 4, "five"]
+
+        array[6] = 6;
+        array[7] = "seven";
+        array[9] = "3+6";
+
+        document.write("array 배열 출력<br />");
+        print_array(array, "array");
+
+
+        array = [];
+        print_array(array, "array");
+
+        let array1 = []
+        array1.length = 4;
+        document.write("array1 배열 출력<br />");
+        print_array(array1, "array1");
+
+        let array2 = [];
+        array2[99] = 100;
+        document.write("array2 length : " + array2.length + "<br />");
+
+        // 연관 배열
+        let array3 = [];
+        array3["name"] = "홍길동";
+        array3["age"] = "32";
+        document.write(array3["name"] + " / " + array3["age"] + "<br />");
+
+        // 순회시 전달값이 배열의 원소가 아닌 index(Key)
+        for (let value in array3) {
+            console.log(value);
+            document.write(array3[value] + "<br />");
+        }
+        document.write("<br />");
+
+        let numbers = [10, 20, 30, 40, 50];
+
+        numbers.push(60);
+        document.writeln(numbers + '<br />');   // 출력 : 10,20,30,40,50,60
+        let item = numbers.pop();
+        document.writeln("item : " + item + " | " + numbers + '<br />');
+        // 출력 : 10,20,30,40,50
+        document.write("<br />");
+
+        // 원소의 값 전달
+        for (let data of numbers) {
+            document.write(data + " ");
+        }
+        document.write("<br />");
+
+        // 요소 추가 = 새로운 length 값 반환
+        document.write("<h3>요소 추가 - push / unshift </h3>");
+        const len1 = numbers.push(60, 70); // 배열 끝에 추가
+        document.write("length : " + len1 + " | 배열 : " + numbers);
+        document.write("<br />");
+
+        const len2 = numbers.unshift(0); // 배열 앞에 추가
+        document.write("length : " + len2 + " | 배열 : " + numbers);
+        document.write("<br />");
+
+        // 요소 추출 - 꺼낸 요소 반환
+        document.write("<h3>요소 추출 - pop / shift </h3>");
+        const chars = ["a", "b", "c", "d"];
+        let elm1 = chars.pop(); // 마지막 요소 꺼냄
+        document.write("꺼낸 요소 : " + elm1 + " | 배열 : " + chars);
+        document.write("<br />");
+        const elm2 = chars.shift(); // 첫번째 요소 꺼냄
+        document.write("꺼낸 요소 : " + elm2 + " | 배열 : " + chars);
+        document.write("<br />");
+
+        document.write("<h3>splice 메서드 사용하기 </h3>");
+        // 인수가 1개일 경우
+        const number = [1, 2, 3, 4, 5];
+        const newNumber = number.splice(2);
+        document.write("반환된 배열 : " + newNumber + "<br />");
+        document.write("변경된 배열 : " + number + "<br />");
+        document.write("<br />");
+
+        // 인수가 2개일 경우
+        const study = ["html", "css", "web", "jquery"];
+        const newStudy = study.splice(2, 1);
+        document.write("반환된 배열 : " + newStudy + "<br />");
+        document.write("변경된 배열 : " + study + "<br />");
+        document.write("<br />");
+
+        // 인수가 3개 이상일 경우
+        const newStudy2 = study.splice(2, 1, "js");
+        document.write("반환된 배열 : " + newStudy2 + "<br>");
+        document.write("변경된 배열 : " + study);
+        document.write("<br />");
+
+        document.write("<h3>slice 메서드 사용하기</h3>");
+        // 추출한 요소로 배열 만듦, 기존 배열 변경안됨
+        let colors = ["red", "green", "blue", "white", "black"];
+        let colors2 = colors.slice(2); // 인덱스 2부터 끝까지
+        document.write("반환된 배열 : " + colors2 + "<br/>");
+        document.write("변경된 배열 : " + colors + "<br/>");
+        document.write("<br />");
+
+        let colors3 = colors.slice(2, 4); // 인덱스 : 2, 3 // 범위 2 <= index < 4
+        document.write("반환된 배열 : " + colors3);
+        document.write("<br />");
+
+        function printTel() {
+            let tel = "010-1234-3245".split("-");
+            document.getElementById("phone1").value = tel[0];
+            document.getElementById("phone2").value = tel[1];
+            document.getElementById("phone3").value = tel[2];
+        }
+    </script>
+</head>
+
+<body>
+    <h3>핸드폰 번호 출력 (임의의 전화번호 설정 : 010-1234-3245)</h3>
+    <form>
+        <input type="text" name="phone1" id="phone1" maxlength="3"/>
+        <label>-</label>
+        <input type="text" name="phone2" id="phone2" maxlength="4" />
+        <label>-</label>
+        <input type="text" name="phone3" id="phone3" maxlength="4" />
+    </form>
+
+</body>
+
+</html>

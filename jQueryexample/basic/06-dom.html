@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_dom.html</title>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../css/06_dom.css" />
+    <script src="../js/06_dom.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Javascript에서 HTML 구조를 제어하는데 있어서 가장 중요한 개념이 DOM(Document Object Model)
+        DOM의 두 가지 의미를 갖는데,
+        - HTML과 XML 문서에 대한 구조적 정보를 제공하는 양식
+        - 문서 구조나 외양 및 내요응ㄹ 빠굴 수 있도록 프로그램에서 접근할 수 있는 방법을 제공
+    
+        함수
+            - next() : 현재 요소의 다음 요소를 반환.
+            - prev() : 현재 요소의 이전 요소를 반환.
+            - parent() : 현재 요소의 부모 요소를 반환.
+            - children() : 현재 요소의 자식 요소를 반환.
+            - eq(n) : 여소의 n번째 index를 반환.
+
+	탐색 함수 	
+		- next() : 현재 요소의 다음 요소를 반환. $('요소명').next()
+		- prev() : 현재 요소의 이전 요소를 반환. $('요소명').prev()
+		- parent() : 현재 요소의 부모 요소를 반환. $('요소명').parent()
+		- children() : 현재 요소의 자식 요소를 반환. $('요소명').children()
+		- eq(n) : 요소의 n번째 index 요소를 반환. $('요소명').eq(n) or $('요소명:eq(n)')
+		- parents(): 선택된 요소의 모든 상위 요소 반환. $('요소명').parents([매개변수])
+        - find(): 선택된 요소의 인자와 일치하는 모든 하위 요소 반환. $('요소명').find(매개변수) 
+    -->
+    <table>
+        <tr>
+            <td>1번</td>
+            <td>2번</td>
+            <td>3번</td>
+        </tr>
+        <tr>
+            <td>4번</td>
+            <td>5번</td>
+            <td>6번</td>
+        </tr>
+        <tr>
+            <td>7번</td>
+            <td>8번</td>
+            <td>9번</td>
+        </tr>
+    </table>
+    <!-- 
+        [요구사항]
+        링크 클릭시 a 태그내의 텍스트를 얻어
+        부모 요소인 div 태그의 배경이미지로 설정.
+     -->
+    <div id="area">
+        <ul>
+            <li class="item">
+                <a href="#">../images/page1.jpg</a>
+            </li>
+            <li class="item">
+                <a href="#">../images/page2.jpg</a>
+            </li>
+            <li class="item">
+                <a href="#">../images/page3.jpg</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

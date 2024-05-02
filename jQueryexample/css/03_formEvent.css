@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 20px;
+}
+form {
+    border:1px solid black;
+    width: 600px;
+    margin: 30px auto;
+}
+li {
+    /* list-style-type: none; */
+    padding:10px;
+    margin-bottom: 10px;
+}
+label[for] {
+    width: 100px;
+    display: inline-block;
+}
+#submit {
+    text-align: center;
+    margin-bottom: 10px;;
+}

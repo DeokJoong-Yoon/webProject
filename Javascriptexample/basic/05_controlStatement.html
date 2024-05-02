@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>제어문 예제</title>
+   <style>
+
+   </style>
+   <script src="../js/05_controlStatement.js"></script>
+</head>
+
+<body>
+   <div>
+      <h2>성적 구하기</h2>
+      <form>
+         <input type="text" name="kor" id="kor" placeholder="국어점수(kor)" size="10" />
+         <input type="text" name="eng" id="eng" placeholder="영어점수(eng)" size="10" />
+         <input type="text" name="math" id="math" placeholder="수학점수(math)" size="10" />
+         <button type="button" onclick="result()" id="cal">성적 구하기</button>
+         <br />
+         <input type="text" name="sum" id="sum" placeholder="합계" size="10" readonly />
+         <input type="text" name="avg" id="avg" placeholder="평균" size="10" readonly />
+         <input type="text" name="grade" id="grade" placeholder="학점" size="10" readonly />
+      </form>
+   </div>
+   <!-- <div>
+      <h2>숫자 맞추기 게임</h2>
+      <p>
+         [참고] 난수(1~10) : Math.floor((Math.randon * 10) + 1);
+      </p>
+
+   </div> -->
+   <div>
+      <div id="hello" ></div>
+      <script type="text/javascript">
+         for (let i = 1; i < 7; ++i) {
+            document.write("<h" + i + ">Hello JavaScript</h" + i + ">");
+         }
+         //<h1>Hello JavaScript</h1>
+         for (let j = 1; j < 4; ++j) {
+            document.write("<img src='../images/" + j + ".jpg' />");
+         }
+      </script>
+   </div>
+
+   <h3>구구단 출력</h3>
+   <div id="gugudan">
+      <script>
+         for (let i = 2; i < 10; ++i) {
+            for (let j = 1; j < 10; ++j) {
+               document.write(i + " * " + j + " = " + (i * j) + "<br />");
+            }
+         }
+      </script>
+   </div>
+</body>
+
+</html>

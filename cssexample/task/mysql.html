@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="search">
+            <h1><a href="index.html">Programmer 입문</a></h1>
+            <!--google search function-->
+            <FORM name=google_search action=http://www.google.co.kr/search method=get target="_blank">
+                <INPUT type="text" class="search_google" size=22 height=10 placeholder="검색은 여기서 하세요." name=query> 
+                <INPUT type='submit' value=' 검색 '>
+            </FORM>
+        </div>
+    </header>
+    <main id="grid">
+        <nav>
+            <ul>
+                <li><a href="html.html" title="html">HTML</a></li>
+                <li><a href="java.html" title="java">Java</a></li>
+                <li><a href="C.html" title="C">C</a></li>
+                <li><a href="phython.html" title="phython">Phython</a></li>
+                <li><a href="mysql.html" title="mysql">MySQL</a></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- 여기에 본문 작성 -->
+            <h1>MySQL</h1>
+            <ul>
+                <li><a href="#korean">한글</a></li>
+                <li><a href="#english">영어</a></li>
+            </ul>
+            <p id="korean">
+                MySQL은 세계에서 가장 많이 쓰이는 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)이다.
+                다중 스레드, 다중 사용자, 구조질의어 형식의 데이터베이스 관리 시스템으로 오라클이 관리 및 지원하고 있으며, 
+                Qt처럼 이중 라이선스가 적용된다. 하나의 옵션은 GPL이며, GPL 이외의 라이선스로 적용시키려는 경우 전통적인 지적재산권
+                라이선스의 적용을 받는다. 위와 같은 지원 방식은 자유 소프트웨어 재단이 프로젝트에 저작권을 적용하는 방법과
+                비슷한 JBoss의 모델과 유사하다. 그러나 기반코드가 개인의 소유자에게 저작권이 있고 커뮤니티에 의해 개발되는
+                 아파치 프로젝트와는 다르다. MySQL AB는 또한 MaxDB라고 불리는 MySQL AB와는 기반코드가 다른 데이터베이스 관리 시스템을
+                 판매했으나 2007년 이래로 MaxDB는 SAP AG가 소유하고 있다. 
+                 썬 마이크로시스템즈에 10억 달러에 인수되었으나, 썬 마이크로시스템즈가 오라클에 인수되며 같이 넘어갔다.
+            </p>
+            <br /><br />
+            <h3>- 입문 강의</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vgIc4ctNFbc?si=e2zoh52HASR90tSB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br /><br />
+            <iframe width="800" height="500" src="https://tcpschool.com/examples/tryit/tryMysql.php?filename=mysql_basic_select_01" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <br /><br />
+            <p id="english">
+                MySQL is an open-source relational database management system (RDBMS).
+                Its name is a combination of "My", the name of co-founder Michael Widenius's daughter My, and "SQL",
+                the acronym for Structured Query Language. A relational database organizes data into one
+                or more data tables in which data may be related to each other; these relations help structure the data. 
+                SQL is a language that programmers use to create, modify and extract data from the relational database,
+                as well as control user access to the database.
+                In addition to relational databases and SQL, an RDBMS like MySQL works with an operating system to implement
+                a relational database in a computer's storage system, manages users, 
+                allows for network access and facilitates testing database integrity and creation of backups.
+                MySQL is free and open-source software under the terms of the GNU General Public License, 
+                and is also available under a variety of proprietary licenses.
+                MySQL was owned and sponsored by the Swedish company MySQL AB, which was bought 
+                by Sun Microsystems (now Oracle Corporation).
+                In 2010, when Oracle acquired Sun, Widenius forked the open-source MySQL project to create MariaDB.         
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

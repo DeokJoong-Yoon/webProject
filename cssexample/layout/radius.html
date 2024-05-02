@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>예제</title>
+    <style>
+        img {
+            /* border-radius: 100%; */
+            display: block;
+            width:600px;
+            margin: 5px auto;
+            background-color: #fff;
+        }
+        .radius {
+            border: 1px solid black;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px black;
+        }
+        #round1 {
+            border: 1px solid black;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            
+        }
+    </style>
+</head>
+<body style="background-color: red;">
+    <p>
+        <img src="../images/cat.jpg" alt="cat 안나옴">
+        <img src="../images/cat.jpg" alt="cat" class="radius">
+        <img src="../images/bear.jpg" alt="bear">
+        <img src="../images/bear.jpg" alt="bear" class="radius">
+        <img src="../images/photo.jpg" alt="bear">
+        <img src="../images/photo.jpg" alt="bear" id="round1">
+    </p>
+</body>
+</html>

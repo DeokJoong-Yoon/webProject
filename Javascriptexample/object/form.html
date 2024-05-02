@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+    <script src="../js/form.js"></script>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>회원가입</legend>
+            <ul>
+                <li>
+                    <label>이름</label>
+                    <input type="text" name="user_name" id="user_name">
+                    <hr />
+                </li>
+                <li>
+                    <label>성별</label>
+                    <label>
+                        <input type="radio" name="gender">남자
+                    </label>
+                    <label>
+                        <input type="radio" name="gender">여자
+                    </label>
+                    <hr />
+                </li>
+                <li>
+                    <label>직업</label>
+                    <select name="job" id="job">
+                        <option value="">----- 선택하세요 -----</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <hr />
+                </li>
+                <li>
+                    <label>취미</label>
+                    <label><input type="checkbox" name="hobby" value="걷기">걷기</label>
+                    <label><input type="checkbox" name="hobby" value="축구">축구</label>
+                    <label><input type="checkbox" name="hobby" value="농구">농구</label>
+                    <label><input type="checkbox" name="hobby" value="야구">야구</label>
+                    <label><input type="checkbox" name="hobby" value="여행">여행</label>
+                    <label><input type="checkbox" name="hobby" value="영화">영화</label>
+                    <hr />
+                </li>
+            </ul>
+            <div>
+                <button type="button">가입</button>
+                <button type="button">초기화</button>
+            </div>
+            <hr>
+        </fieldset>
+    </form>
+</body>
+
+</html>

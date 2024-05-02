@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운 목록 만들기</title>
+</head>
+
+<body>
+    <label for="prod1">상품 선택</label>
+    <select id="prod1">
+        <option value="special_5">선물용 5kg</option>
+        <option value="fm3" selected>가정용 3kg</option>
+        <option value="fm5" selected>가정용 5kg</option>
+    </select>
+    <br /><br /><br />
+
+    <label for="prod2">포장 여부</label>
+    <input type="text" id="prod2" list="pack">
+    <datalist id="pack">
+        <option value="package">선물 포장</option>
+        <option value="no_package">포장 안함</option>
+    </datalist>
+</body>
+
+</html>

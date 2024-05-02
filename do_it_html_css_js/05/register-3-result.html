@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register-3-result.css">
+    <title></title>
+</head>
+
+<body>
+    <h1>회원 가입을 환영합니다.</h1>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>
+                    <label for="user_id">아이디</label>
+                    <input type="text" id="user_id" placeholder="4자 ~ 10자 사이, 공백없이" />
+                </li>
+                <li>
+                    <label for="user_email">이메일</label>
+                    <input type="email" name="user_email" id="user_email" />
+                </li>
+                <li>
+                    <label for="user_password">비밀번호</label>
+                    <input type="password" name="user_password" id="user_password" required/>
+                </li>
+                <li>
+                    <label for="password_confirm">비밀번호 확인</label>
+                    <input type="password" name="password_confirm" id="password_confirm" required>
+                </li>
+                <li>
+                    <label for="reg_path">가입 경로</label>
+                    <select name="reg_path" id="reg_path">
+                        <option value="blog">블로그</option>
+                        <option value="search">검색</option>
+                        <option value="sns">SNS</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea name="memo" id="memo" cols="30" rows="5" placeholder="남길 말씀이 있다면 여기에"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소시</legend>
+            <input type="radio" id="mail_y" name="mail" value="yes" />
+            <label for="mail_y">메일 수신</label>
+            <input type="radio" id="mail_n" name="mail" value="no" checked />
+            <label for="mail_n">메일 수신 안함</label>
+        </fieldset>
+        <div>
+            <button type="submit" id="submit">가입하기</button>
+            <button type="reset" id="reset">취소</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

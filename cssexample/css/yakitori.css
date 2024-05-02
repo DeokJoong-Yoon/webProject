@@ -1,0 +1,21 @@
+/* section 내 컨텐츠 (article) 영역 */ /* main 에서만 사용하는 css */
+article.more-articles {
+    display: inline;    
+    float: left;
+    width: 290px;
+    padding: 5px; margin:10px;
+    border-top: 1px solid #ffffff;
+}
+.more-articles img {
+    width: 290px;
+    height: 190px;
+    border: 1px solid #eeeeee;
+}
+.more-articles p{
+    border-bottom: 1px solid #807c72;
+    padding: 5px 0px 15px 0px;
+    font-size: 90%;
+}
+.more-articles p:last-child {
+    border-bottom: none;
+}

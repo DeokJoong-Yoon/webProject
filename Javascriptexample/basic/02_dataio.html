@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>02_데이터입출력 - 02_dataio.html</title>
+   <style>
+      .box {
+         border: 1px solid black;
+      }
+
+      .box1 {
+         color: orange;
+         border: 1px solid #000;
+         border-radius: 10px;
+         background-color: grey;
+         padding: 10px;
+         width: 400px;
+      }
+   </style>
+   <script src="../js/02_javascript_basic.js"></script>
+</head>
+
+<body>
+
+   <h1>자바스크립트에서의 데이터 입/출력</h1>
+   <!-- 
+        * window : 자바스크립트 내장 객체로 브라우저 창이 열릴때마다 하나씩 만들어지는 객체
+        브라우저 창 안에 존재하는 모든 요소들의 최상위 객체(생략가능)
+
+        * document : 웹 문서마다 하나씩 만들어지는 객체 (html문서에 대한 정보들을 가지고 있음)
+     -->
+
+   <h2> 1. 데이터 출력하는 구문</h2>
+   <pre>
+        1) [window.]alert("알림창에 출력할 문구");
+        2) console.log("콘솔창에 출력할 문구");
+        3) document.write("화면상에 출력할 문구");
+        4) 선택한요소.innerText = "요소에 출력할 문구";
+        5) 선택한요소.innerHTML = "요소에 출력할 문구"; <!--5번을 제일 많이 활용함-->
+     </pre>
+   <hr />
+
+   <h3>1) window.alert("내용")</h3>
+   <pre>
+        - alert("");
+        - 브라우저에 대화상자를 띄우는 함수
+     </pre>
+
+   <!-- 클릭시 "alert 버튼 클릭됨" 대화상자 출력 -->
+   <button type="button" onclick="fnAlert()">alert 확인</button>
+   <hr />
+
+   <h3>3) document.write("내용")</h3>
+   <button type="button" onclick="documentWrite()">document 확인</button>
+   <hr /> <!-- 버튼을 눌렀을 때 작동하므로 대소문자 틀려도 이클립스처럼 빨간색 밑줄로 오류라고 나오지 않음-->
+   <!-- 개발자도구(F12)를 활용하면 어디서 오류가 났는지 볼 수 있음 -->
+   <h3>4) innerText</h3>
+   <pre>
+        자바스크립트에서 요소에 작성된 내용을 읽어들이거나 변경하는 속성
+        
+        - 내용을 읽어올 때 태그는 모두 무시함.
+        - 내용을 변경할 때 태그는 문자열 자체로 해석됨. (태그 해석 X)
+
+     </pre>
+
+   <button type="button" onclick="getInnerText()">innerText로 읽어오기</button>
+   <button type="button" onclick="setInnerText()">innerText로 변경하기</button>
+
+   <p id="test1" class="box">
+      테스트1 입니다.
+      <br />
+      <strong>안녕하세요?</strong>
+   </p>
+   <hr />
+
+   <h3>5) innerHTML</h3>
+   <pre>
+        자바스크립트에서 요소 전체를(태그 + 속성 + 내용) 읽어들이거나 변경하는 속성
+        - 내용을 읽어올 때 태그 + 속성도 모두 포함함
+        - 내용을 변경할 때 태그는 HTML요소로 해석됨 (태그 해석 O)
+     </pre>
+
+   <button type="button" onclick="getInnerHTML1()">innerHTML로 읽어오기</button>
+   <button type="button" onclick="setInnerHTML1()">innerHTML로 변경하기</button>
+
+   <p id="test2" class="box">
+      테스트2 입니다.
+      <br />
+      <strong>안녕하세요?</strong>
+   </p>
+   <hr />
+
+   <h3>innerHTML 예제</h3>
+   <h1 id="title"></h1>
+   <button type="button" onclick="print()">h1 태그</button>
+   <hr />
+
+   <h2>2. 데이터 입력받는 구문 (변수저장)</h2>
+   <pre>
+      1) 변수 = [windows.]confirm("요구사항");
+      2) 변수 = [windows.]prompt("요구사항");
+      3) 변수 = 선택한요소.속성(className, innerHTML, innerText, ...);
+      4) 변수 = 선택한input요소.value;
+   </pre>
+
+   <h3>1) window.confirm("내용")</h3>
+   <pre>
+      질문에 대한 "예" / "아니오" 결과를 얻고자 할 때 사용하는 대화 상자 출력 함수
+      -> 선택 결과에 따라 확인 버튼 클릭시 true 또는 취소 버튼 클릭시 false가 변환됨
+   </pre>
+
+   <button type="button" id="confirmBtn" onclick="fnConfirm()">confirm 확인하기</button>
+
+   <hr />
+
+   <h3> 2) window.prompt("내용")</h3>
+   <pre>
+      - 텍스트를 작성할 수 있는 대화상자
+
+      - 확인 : 입력한 값 반환(문자열)
+      - 취소 : null 반환
+   </pre>
+
+   <button type="button" onclick="fnPrompt1()">클릭</button>
+   <div id="area2"></div>
+   <br />
+
+   <button type="button" onclick="fnPrompt2()">확인하기</button>
+   <p id="area3"></p>
+   <hr />
+
+   <h3>4)선택한 input요소.value</h3>
+   <label for="userId">아이디 : </label>
+   <input type="text" id="userId" /> <br />
+   <label for="userPwd">비밀번호 : </label>
+   <input type="password" id="userPwd" /> <br />
+
+   <button type="button" onclick="fnInput()">클릭</button><br />
+
+   <label for="result">결과 : </label>
+   <input type="text" id="result" />
+
+   <h3>4) value 예제 - 입력받은 값 변경</h3>
+   <input type="text" id="number1" /><br />
+   <button type="button" onclick="fnChange()">change</button><br />
+   <input type="text" id="number2" />
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_formExample.html</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/02_formExample.js"></script>
+</head>
+
+<body>
+    <h1>두수 연산하기</h1>
+    <input type="text" id="number1" placeholder="숫자입력" />
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="number2" placeholder="숫자입력" />
+    <button type="button" id="operation"> = </button>
+    <span id="result">?</span>
+
+    <!-- 
+        곱셈은 덧셈을 편하게 하기 위해 등장한 연산이다.
+        덧셈은 곱셈을 하는 코드를 작성하시오.
+        3 * 9 일 경우, 3을 9번 더하는 것과 9를 3번 더하는 것 중 어느 것이 효율적인가? -->
+    <h1>덧셈으로 곱셈을 표현</h1>
+    <form name="toplus" id="toplus">
+        <p>곱셈을 실행할 두 수를 입력해주세요.</p>
+        <input type="text" name="number3" id="number3" placeholder="숫자 입력" /><br />
+        <input type="text" name="number4" id="number4" placeholder="숫자 입력" /><br />
+        <button type="button" id="plusBtn">덧셈으로 곱셈을 표현</button><br />    
+        <input type="text" name="area" id="area" placeholder="결과 출력" readonly="readonly" />
+
+    </form>
+</body>
+
+</html>
